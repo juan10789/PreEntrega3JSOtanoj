@@ -1,0 +1,58 @@
+const productos = [
+  {
+    id: 1,
+    nombre: "Placa MDF 18mm BLANCA",
+    precio: 10500,
+    img: "https://www.faplaconline.com.ar/home/medias/AR-135TXT-MEL-base-300Wx300H?context=bWFzdGVyfGltYWdlc3wzMjE1fGltYWdlL2pwZWd8aDExL2g1OC84ODMyMTA0MTM2NzM0L0FSXzEzNVRYVF9NRUxfYmFzZV8zMDBXeDMwMEh8YjczMWMyMWM4ODU2ZjgzZjQ2NGZiZGQyYTAxYjEyNjQ0OGJjZDY0M2I0YTVlYjY0N2RlMmRlYTgwM2ZkZjBjOQ",
+    cantidad: 1,
+  },
+  {
+    id: 2,
+    nombre: "Placa MDF 18mm NEGRO",
+    precio: 11200,
+    img: "https://www.faplaconline.com.ar/home/medias/AR-303TXT-MEL-base-300Wx300H?context=bWFzdGVyfGltYWdlc3wyNzg2fGltYWdlL2pwZWd8aDI1L2g1Zi84ODE2ODg5NTI4MzUwL0FSXzMwM1RYVF9NRUxfYmFzZV8zMDBXeDMwMEh8MTc2OTc0NDhjOWQ5NDg1YzMxNmZmMjQ5YTAwZDMzNTZkMTA2ZjQ2MjVlMjE4NWMxMWEyMTExYmY0NDFhODM5Mg",
+    cantidad: 1,
+  },
+  {
+    id: 3,
+    nombre: "Placa MDF 18mm GRAFITO",
+    precio: 11200,
+    img: "https://www.faplaconline.com.ar/home/medias/AR-107TXT-MEL-base-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMDE1fGltYWdlL2pwZWd8aDM5L2g0NC84ODE2ODg0MjUyNzAyL0FSXzEwN1RYVF9NRUxfYmFzZV8zMDBXeDMwMEh8Y2YzZGExMjRkYWZmNWU1NmQ2NzUxMzRlYTczMWUxNDQwM2E3ZTQ3YTdkYjBhNjA3ZWFmZWFiZDlkZTdmNzgxMQ",
+    cantidad: 1,
+  },
+  {
+    id: 4,
+    nombre: "Placa MDF 18mm GRIS HUMO",
+    precio: 11200,
+    img: "https://www.faplaconline.com.ar/home/medias/AR-108TXT-MEL-base-300Wx300H?context=bWFzdGVyfGltYWdlc3wxNzE5fGltYWdlL2pwZWd8aGVlL2hlYi84ODE2ODg2MTIwNDc4L0FSXzEwOFRYVF9NRUxfYmFzZV8zMDBXeDMwMEh8OTM2OTI2OGNlNTdkMTQ1MWJhZWMzODM2ZGFjZjM3NTVhNmM5NmY0Y2MyYjAyZmE2YzVjZmYxNDg1YWIwNzMzYQ",
+    cantidad: 1,
+  },
+  {
+    id: 5,
+    nombre: "Placa MDF 18mm TEKA ARTICO",
+    precio: 15240,
+    img: "https://www.faplaconline.com.ar/home/medias/AR-047NAT-MEL-base-300Wx300H?context=bWFzdGVyfGltYWdlc3wzMjc4OXxpbWFnZS9qcGVnfGhhNS9oMjkvODgxNjgwMDU5NTk5OC9BUl8wNDdOQVRfTUVMX2Jhc2VfMzAwV3gzMDBIfGYzMjdjZjA1YWU0YWY4OTg2YzY5MTlhN2MzMjNiNjEzYTNhMjdjYmIwOGIwNTY0NWI5M2IwZjAyNTExYzYxOGI",
+    cantidad: 1,
+  },
+  {
+    id: 6,
+    nombre: "Placa MDF 18mm TERRARUM",
+    precio: 15240,
+    img: "https://www.faplaconline.com.ar/home/medias/AR-043NAT-MEL-base-300Wx300H?context=bWFzdGVyfGltYWdlc3w2NTIzNXxpbWFnZS9qcGVnfGg5OS9oZDcvODgzMjAyMDE4NTExOC9BUl8wNDNOQVRfTUVMX2Jhc2VfMzAwV3gzMDBIfDIyYzkwMmNmNzE3MDA0ODZmZDA3NDMyNzhkN2RlNGE3MjBlYmRmYWFlZmZhZjc3OWM3NWUyZWEwZGJkY2U3NGQ",
+    cantidad: 15240,
+  },
+  {
+    id: 7,
+    nombre: "Placa MDF 18mm SAHARA",
+    precio: 15240,
+    img: "https://www.faplaconline.com.ar/home/medias/AR-112DMT-MEL-base-300Wx300H?context=bWFzdGVyfGltYWdlc3w5MDA4fGltYWdlL2pwZWd8aGUyL2hhYi84ODI1MDY0NTU0NTI2L0FSXzExMkRNVF9NRUxfYmFzZV8zMDBXeDMwMEh8ZjVjYTczM2UwMDZjNzRmZjE2MDQ4ZTVhNjQwNDg2MTFkYjgwMzk5MTc4NWRlZTA0OTY4MTg5YjlhZTcyMTBmOA",
+    cantidad: 1,
+  },
+  {
+    id: 8,
+    nombre: "Placa MDF 18mm BALTICO",
+    precio: 15240,
+    img: "https://www.faplaconline.com.ar/home/medias/AR-097NOR-MEL-base-300Wx300H?context=bWFzdGVyfGltYWdlc3w0OTE1N3xpbWFnZS9qcGVnfGgwYy9oMzcvODgxNjkxOTA4NTA4Ni9BUl8wOTdOT1JfTUVMX2Jhc2VfMzAwV3gzMDBIfDdkYzBkZjVlOTY3NTNmNDUyMDZjZmFlMzljMDlmNjk5MmZjMDgxOTA5Nzc3YTJiYzEzYjAzZTQzOGUzNzZjMWI",
+    cantidad: 1,
+  },
+];
