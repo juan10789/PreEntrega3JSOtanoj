@@ -24,7 +24,9 @@ productos.forEach((product) => {
   content.append(comprar);
 
   comprar.addEventListener("click", () => {
-    const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
+    const repeat = carrito.some(
+      (repeatProduct) => repeatProduct.id === product.id
+    );
 
     if (repeat) {
       carrito.map((prod) => {
@@ -48,9 +50,6 @@ productos.forEach((product) => {
   });
 });
 
-//set item
 const saveLocal = () => {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 };
-
-//get item
